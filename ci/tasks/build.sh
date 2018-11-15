@@ -17,7 +17,7 @@ tar -xvzf dotnet-ext-linux.tar.gz
 
 echo list dir
 ls
-cf ./bin
+cd ./bin
 chmod +x dotnet-ext-pack 
 chmod +x dotnet-ext-nuget
 ln -s dotnet-ext-pack /usr/local/bin/
