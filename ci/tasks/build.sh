@@ -7,7 +7,7 @@ ls -l ../
 echo "starting build ..."
 
 dotnet restore -r ubuntu.14.04-x64
-dotnet publish -f netcoreapp1.0 -r ubuntu.14.04-x64 -o ./publish
+dotnet publish -f netcoreapp2.1 -r ubuntu.14.04-x64 -o ./publish
 
 echo "copying files to ../build-output"
 cp manifest.yml ../build-output
@@ -21,6 +21,6 @@ cp ./bin/dotnet-nuget-ext /usr/local/bin/
 
 dotnet pack-ext --version
  
-dotnet pack-ext simple ./src/TestApplication/TestApplication.csproj --basepath ./publish --no-publish --no-build --output . --version "1.0.0" --source https://www.myget.org/F/dotnet-resource-test/api/v3/index.json
+dotnet pack-ext simple ./src/TestApplication/TestApplication.csproj --basepath ./src/TestApplication/publish --no-publish --no-build --output . --version "1.0.0" --source https://www.myget.org/F/dotnet-resource-test/api/v3/index.json
 
 cp *.nupkg ./build-output
