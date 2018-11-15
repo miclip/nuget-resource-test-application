@@ -26,9 +26,11 @@ cp ./bin/dotnet-nuget-ext /usr/local/bin/
 
 dotnet pack-ext --version
 
-dotnet pack-ext ./NugetResource.TestApplication.csproj -p:PackageVersion=$(dotnet nuget-ext versions 
+version=dotnet nuget-ext versions 
 --name NugetResource.TestApplication --latest 
 --source https://www.myget.org/F/dotnet-resource-test/api/v3/index.json 
---increment --version-spec "1.0.*") --basepath ./publish --no-publish --no-build
+
+dotnet pack-ext ./NugetResource.TestApplication.csproj -p:PackageVersion=$version
+--increment --version-spec "1.0.*" --basepath ./publish --no-publish --no-build
 
 cp *.nupkg ../build-output
