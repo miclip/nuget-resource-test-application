@@ -19,8 +19,8 @@ echo list dir
 
 chmod +x ./bin/dotnet-pack-ext 
 chmod +x ./bin/dotnet-nuget-ext
-ln -s dotnet-pack-ext /usr/local/bin/
-ln -s dotnet-nuget-ext /usr/local/bin/
+ln -s ./bin/dotnet-pack-ext /usr/local/bin/
+ln -s ./bin/dotnet-nuget-ext /usr/local/bin/
 
 dotnet pack-ext --version
 
