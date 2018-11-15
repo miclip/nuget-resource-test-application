@@ -17,11 +17,12 @@ tar -xvzf dotnet-ext-linux.tar.gz
 
 echo list dir
 ls
-chmod +x /bin/dotnet-ext-pack 
-chmod +x /bin/dotnet-ext-nuget
-ln -s /bin/dotnet-ext-pack /usr/local/bin/
-ln -s /bin/dotnet-ext-nuget /usr/local/bin/
-
+cf ./bin
+chmod +x dotnet-ext-pack 
+chmod +x dotnet-ext-nuget
+ln -s dotnet-ext-pack /usr/local/bin/
+ln -s dotnet-ext-nuget /usr/local/bin/
+cd ..
 dotnet pack-ext --version
 
 dotnet pack-ext ./NugetResource.TestApplication.csproj -p:PackageVersion=$(dotnet nuget-ext versions 
