@@ -1,0 +1,4 @@
+---
+applications:
+- name: dotnetresourcetestapp
+  buildpack: dotnet_core_buildpack
