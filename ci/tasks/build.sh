@@ -26,7 +26,7 @@ cp ./bin/dotnet-nuget-ext /usr/local/bin/
 
 dotnet pack-ext --version
 
-dotnet pack-ext simple ./NugetResource.TestApplication.csproj 
+dotnet pack-ext simple ./TestApplication.csproj 
  --version-spec "1.0.0" --basepath ./publish --no-publish --no-build --source https://www.myget.org/F/dotnet-resource-test/api/v3/index.json`
 
 cp *.nupkg ../build-output
