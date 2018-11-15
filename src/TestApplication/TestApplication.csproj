@@ -4,7 +4,7 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <IsPackable>true</IsPackable>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
-    <PackageId>DotnetResource.TestApplication</PackageId>
+    <PackageId>NugetResource.TestApplication</PackageId>
     <Version>1.0.0</Version>
     <Authors>Michael Lipscombe</Authors>
     <Company>Miclip LLC</Company>

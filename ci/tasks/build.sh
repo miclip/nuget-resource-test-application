@@ -14,12 +14,8 @@ cp manifest.yml ../build-output
 
 wget -c https://github.com/miclip/dotnet-extensions/releases/download/v0.7/dotnet-ext-linux.tar.gz -O dotnet-ext-linux.tar.gz 
 tar -xvzf dotnet-ext-linux.tar.gz
-
-echo list dir
-
 chmod +x ./bin/dotnet-pack-ext 
 chmod +x ./bin/dotnet-nuget-ext
-
 cp ./bin/dotnet-pack-ext /usr/local/bin/
 cp ./bin/dotnet-nuget-ext /usr/local/bin/
 
