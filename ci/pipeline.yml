@@ -47,7 +47,6 @@ resources:
     nuget_timeout: 600
     package_id: NugetResource.TestApplication
     prerelease: true
-
   
 jobs:
 - name: build-service
@@ -56,7 +55,8 @@ jobs:
   plan:
   - get: app-repo
     trigger: true
-    
+  - task: build-and-pkg
+    file: app-repo/ci/tasks/build.yml
   - put: nuget-out
 
 - name: deploy-service
@@ -68,7 +68,7 @@ jobs:
   - put: pws-development
     params:
       manifest: nuget-get/NugetResource.TestApplication/manifest.yml
-      path: nuget-get/NugetResource.TestApplication
+      path: nuget-get/NugetResource.TestApplication.*.nupkg
 
      
     
