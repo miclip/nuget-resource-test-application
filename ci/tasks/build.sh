@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "starting build ..."
-
+cd ./app-repo
 dotnet restore -r ubuntu.14.04-x64
 dotnet publish -f netcoreapp2.1 -r ubuntu.14.04-x64 -o ./publish
 
