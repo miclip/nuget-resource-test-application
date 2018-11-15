@@ -16,8 +16,9 @@ wget -c https://github.com/miclip/dotnet-extensions/releases/download/v0.7/dotne
 tar -xvzf dotnet-ext-linux.tar.gz
 
 echo list dir
-ls
+
 cd ./bin
+ls
 chmod +x dotnet-ext-pack 
 chmod +x dotnet-ext-nuget
 ln -s dotnet-ext-pack /usr/local/bin/
