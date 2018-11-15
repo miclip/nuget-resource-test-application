@@ -12,7 +12,8 @@ dotnet publish -f netcoreapp1.0 -r ubuntu.14.04-x64 -o ./publish
 echo "copying files to ../build-output"
 cp manifest.yml ../build-output
 
-wget -c https://github.com/miclip/dotnet-extensions/releases/download/v0.7/dotnet-ext-linux.tar.gz -O - | tar -xz
+wget -c https://github.com/miclip/dotnet-extensions/releases/download/v0.7/dotnet-ext-linux.tar.gz -O dotnet-ext-linux.tar.gz 
+tar -xz dotnet-ext-linux.tar.gz
 
 echo list dir
 ls
