@@ -20,8 +20,8 @@ cp ./bin/dotnet-pack-ext /usr/local/bin/
 cp ./bin/dotnet-nuget-ext /usr/local/bin/
 
 dotnet pack-ext --version
-
+ 
 dotnet pack-ext simple ./src/TestApplication/TestApplication.csproj 
- --version "1.0.0" --basepath ./src/TestApplication/publish --no-publish --no-build --source ./output . https://www.myget.org/F/dotnet-resource-test/api/v3/index.json
+  --basepath ./src/TestApplication/publish --no-publish --no-build --output . --version "1.0.0" --source  https://www.myget.org/F/dotnet-resource-test/api/v3/index.json
 
 cp *.nupkg ./build-output
