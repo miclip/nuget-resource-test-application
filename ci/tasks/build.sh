@@ -24,3 +24,5 @@ dotnet pack-ext --version
 dotnet pack-ext simple ./src/TestApplication/TestApplication.csproj --basepath ./src/TestApplication/publish --no-publish --no-build --output . --version "1.0.0" --source https://www.myget.org/F/dotnet-resource-test/api/v3/index.json
 
 cp *.nupkg ./build-output
+
+ls ./build-output

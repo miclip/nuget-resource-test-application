@@ -58,6 +58,8 @@ jobs:
   - task: build-and-pkg
     file: app-repo/ci/tasks/build.yml
   - put: nuget-out
+    params: 
+      package_path: build-output/*.nupkg
 
 - name: deploy-service
   public: true
@@ -68,7 +70,7 @@ jobs:
   - put: pws-development
     params:
       manifest: nuget-get/NugetResource.TestApplication/manifest.yml
-      path: nuget-get/NugetResource.TestApplication.*.nupkg
+      path: nuget-get/NugetResource.TestApplication
 
      
     
