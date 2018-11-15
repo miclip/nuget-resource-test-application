@@ -6,12 +6,19 @@ ls -l ../
 
 echo "starting build ..."
 
+dotnet restore -r ubuntu.14.04-x64
 dotnet publish -f netcoreapp1.0 -r ubuntu.14.04-x64 -o ./publish
 
 echo "copying files to ../build-output"
 cp manifest.yml ../build-output
 
 wget -c https://github.com/miclip/dotnet-extensions/releases/download/v0.7/dotnet-ext-linux.tar.gz -O - | tar -xz
+
+echo list dir
+ls
+chmod +x dotnet-ext-pack dotnet-ext-nuget
+ln -s ./dotnet-ext-pack /usr/local/bin/
+ln -s ./dotnet-ext-nuget /usr/local/bin/
 
 dotnet pack-ext --version
 
