@@ -69,8 +69,8 @@ jobs:
     trigger: true
   - put: pws-development
     params:
-      manifest: nuget-get/NugetResource.TestApplication/manifest.yml
-      path: nuget-get/NugetResource.TestApplication
+      manifest: nuget-get/manifest.yml
+      path: nuget-get/
 
      
     
