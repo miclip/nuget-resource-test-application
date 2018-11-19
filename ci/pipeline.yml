@@ -61,6 +61,10 @@ jobs:
     params: 
       package_path: build-output/*.nupkg
       nuget_cache_delay: 300
+  - put: pws-development
+    params:
+      manifest: nuget-out/manifest.yml
+      path: nuget-out/
 
 - name: deploy-service
   public: true
