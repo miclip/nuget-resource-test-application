@@ -22,6 +22,6 @@ dotnet pack-ext simple ./src/TestApplication/TestApplication.csproj --basepath .
 
 
 echo "copy package to build-output..."
-mkdir ../build-output
+mkdir -p ../build-output
 cp *.nupkg ../build-output
 ls ../build-output

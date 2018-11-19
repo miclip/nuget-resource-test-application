@@ -60,6 +60,7 @@ jobs:
   - put: nuget-out
     params: 
       package_path: build-output/*.nupkg
+      nuget_cache_delay: 300
 
 - name: deploy-service
   public: true
