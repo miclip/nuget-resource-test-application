@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <IsPackable>false</IsPackable>
-    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>     
+    
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,5 +16,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\TestApplication\TestApplication.csproj" />
   </ItemGroup>
+
+
+
 
 </Project>

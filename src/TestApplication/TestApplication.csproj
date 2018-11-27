@@ -9,14 +9,26 @@
     <Authors>Michael Lipscombe</Authors>
     <Company>Miclip LLC</Company>
     <Description>A test application for dotnet-resource</Description>
+    <IncludeContentInPack>false</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);GetMyPackageFiles</TargetsForTfmSpecificContentInPackage>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App"  />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Steeltoe.Extensions.Configuration.CloudFoundryCore" version="2.1.1"/>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="manifest.yml" CopyToOutputDirectory="Always" CopyToPublishDirectory="Always" />
+    <Content Include="manifest.yml" CopyToPublishDirectory="Always" />
   </ItemGroup>
+
+
+  <Target Name="GetMyPackageFiles">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(OutputPath)/ubuntu.14.04-x64/publish/**/*">
+        <PackagePath>/</PackagePath>
+      </TfmSpecificPackageFile>
+    </ItemGroup>
+  </Target>
 
 </Project>
